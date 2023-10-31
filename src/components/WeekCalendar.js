@@ -141,7 +141,7 @@ const App = () => {
 	return (
 		<div style={appStyle}>
 			<div style={buttonContainerStyle}>
-				<h1 style={h1Style}>le petit menu 🌱</h1>
+				<h1 style={h1Style}>le petit journal 🌱</h1>
 				<div>
 					<button style={buttonStyle} onClick={goToPreviousWeek}>
 						Previous Week
