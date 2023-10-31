@@ -59,10 +59,10 @@ const WeekCalendar = ({ startDate }) => {
 					value={dayTexts[i]}
 					onChange={(e) => handleDayTextChange(i, e.target.value)}
 					style={{
-						width: '100%', // Adjusted to 100% for mobile
+						width: '250px',
 						padding: '5px',
 						margin: '0',
-						minHeight: '200px', // Reduced minHeight for mobile
+						minHeight: '250px',
 						border: '1px solid #ccc',
 						borderRadius: '5px',
 						fontFamily: 'Space Mono, monospace',
