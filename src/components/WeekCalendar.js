@@ -59,10 +59,10 @@ const WeekCalendar = ({ startDate }) => {
 					value={dayTexts[i]}
 					onChange={(e) => handleDayTextChange(i, e.target.value)}
 					style={{
-						width: '400px',
+						width: '100%', // Adjusted to 100% for mobile
 						padding: '5px',
 						margin: '0',
-						minHeight: '320px',
+						minHeight: '200px', // Reduced minHeight for mobile
 						border: '1px solid #ccc',
 						borderRadius: '5px',
 						fontFamily: 'Space Mono, monospace',
@@ -77,7 +77,7 @@ const WeekCalendar = ({ startDate }) => {
 		color: 'black',
 		border: 'none',
 		padding: '10px 20px',
-		margin: '50px',
+		margin: '10px', // Adjusted margin for mobile
 		borderRadius: '5px',
 		cursor: 'pointer',
 	}
@@ -108,7 +108,7 @@ const App = () => {
 
 	const buttonContainerStyle = {
 		display: 'flex',
-		justifyContent: 'space-between', // Use space-between to place buttons at the ends
+		flexDirection: 'column', // Adjusted flex direction for mobile
 		alignItems: 'center', // Center align buttons vertically
 	}
 
@@ -123,7 +123,7 @@ const App = () => {
 		color: 'white',
 		border: 'none',
 		padding: '10px 20px',
-		margin: '5px',
+		margin: '10px',
 		borderRadius: '5px',
 		cursor: 'pointer',
 	}
@@ -141,13 +141,15 @@ const App = () => {
 	return (
 		<div style={appStyle}>
 			<div style={buttonContainerStyle}>
-				<button style={buttonStyle} onClick={goToPreviousWeek}>
-					Previous Week
-				</button>
 				<h1 style={h1Style}>le petit menu 🌱</h1>
-				<button style={buttonStyle} onClick={goToNextWeek}>
-					Next Week
-				</button>
+				<div>
+					<button style={buttonStyle} onClick={goToPreviousWeek}>
+						Previous Week
+					</button>
+					<button style={buttonStyle} onClick={goToNextWeek}>
+						Next Week
+					</button>
+				</div>
 			</div>
 			<WeekCalendar startDate={currentWeek} />
 		</div>
