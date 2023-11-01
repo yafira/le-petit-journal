@@ -102,7 +102,7 @@ const App = () => {
 	)
 
 	const appStyle = {
-		backgroundColor: '#FFFEDF',
+		backgroundColor: '#FFFFFF',
 		padding: '20px',
 	}
 
