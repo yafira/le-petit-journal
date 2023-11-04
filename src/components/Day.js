@@ -28,9 +28,17 @@ const Day = ({ currentDate }) => {
 		fontFamily: 'Space Mono, monospace',
 	}
 
+	const dayLabelStyle = {
+		fontFamily: 'Space Mono, monospace',
+		margin: '20px 0',
+		fontSize: '16px',
+	}
+
 	return (
 		<div className='day'>
-			<div className='day-label'>{format(currentDate, 'EEEE')}</div>
+			<div className='day-label' style={dayLabelStyle}>
+				{format(currentDate, 'EEEE')}
+			</div>
 			<div
 				className='day-date'
 				style={{ margin: '10px 0', padding: '5px', ...dateStyle }}
